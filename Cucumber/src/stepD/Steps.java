@@ -19,13 +19,13 @@ public class Steps {
 		driver.manage().deleteAllCookies();
 		driver.get("https://www.amazon.com/");
 	}
-	@When("^Enter the information of specific product$")
-	public void Enter_the_information_of_specific_product(){
-		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Beats3 Studio");
+	@When("^User Enter beats solo in the top search inputbox$")
+	public void User Enter_beats_solo_in_the_top_search_inputbox() throws Throwable{
+		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Beats Solo");
 
 	}
-	@Then("^User should be able to add to cart$")
-	public void User_should_be_able_to_add_to_cart() throws Throwable{
+	@And("^Click search button$")
+	public void Click_search_button() throws Throwable{
 		driver.findElement(By.xpath("//span[@class='a-size-medium a-color-base a-text-normal']")).click();
 		driver.findElement(By.linkText("Add to List")).click();
 	}
