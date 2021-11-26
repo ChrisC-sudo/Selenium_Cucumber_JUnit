@@ -21,7 +21,7 @@ public class Steps {
 		driver.get("https://www.amazon.com/");
 	}
 	@When("^User Enter beats solo in the top search inputbox$")
-	public void User Enter_beats_solo_in_the_top_search_inputbox() throws Throwable{
+	public void User_Enter_beats_solo_in_the_top_search_inputbox() throws Throwable{
 		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Beats Solo");
 
 	}
